@@ -1,0 +1,26 @@
+{% extends 'main/Web/base.html' %}
+
+{% block title %}
+Login
+{% endblock %}
+
+{% block content %}
+<h2 class="mb-3 text-center">Log In</h2>
+<div class="reglog">
+    <form method="POST">
+    {% csrf_token %}
+    <input type="text" name="username" placeholder="Username" class="form-control">
+    <input type="password" name="password" placeholder="Password" class="form-control">
+    <button type="submit" class="btn btn-primary">Login</button>
+        {% for message in messages %}
+            <h6 id="messages" class="text-center mt-4">{{message}}</h6>
+        {% endfor %}
+        <div class="mt-4 text-center">
+            Don't have an account?
+            <a href="{% url 'register' %}">Sign up</a>
+        </div>
+    </form>
+
+</div>
+
+{% endblock %}

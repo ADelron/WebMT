@@ -1,0 +1,9 @@
+iv.img {
+    color: grey;
+    width: 150px;
+    height: 350px;
+    border: solid black 1px;
+    background-image: url("https://i.stack.imgur.com/wPh0S.jpg");
+    background-size: cover;
+    background-position: center;
+}

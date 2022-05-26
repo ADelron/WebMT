@@ -1,0 +1,23 @@
+{% extends 'main/Web/base.html' %}
+
+{% block title %}
+Add Photo
+{% endblock %}
+
+{% block content %}
+    <div class="back_button"><a class="btn btn-sm" href="gallery.html">BACK</a></div>
+
+        <h2 class="mb-3 text-center">Add photo</h2>
+        <div class="row">
+             <div class="col-md-5  add">
+                 <form method='POST' enctype="multipart/form-data">
+                     {% csrf_token %}
+                        <label>Upload image</label>
+                        <input required name="image" type="file" class="form-control-file">
+                        <button type="submit" class="btn btn-primary">Upload</button>
+                </form>
+             </div>
+        </div>
+
+
+{% endblock %}

@@ -1,0 +1,79 @@
+{% extends 'main/Web/base.html' %}
+
+{% block title %}
+About Us
+{% endblock %}
+
+{% block content %}
+
+<div class="text_content">
+    <h1> MT-2101 </h1>
+    <p>Приветсвуем тебя на сайте МТ-2101! <br>
+        Никто не поспорит с тем, что атмосфера МТ-2101 наполнена теплом и уютом. <br>
+        Мы недавно познакомились, но это не помешало нам выстроить лояльные и хорошие отношения между собой)) <br>
+        Каждый мембер группы отзывчив и готов помочь остальным. А также, мы умеем друг друга поддерживать и <br>
+        принимать друг друга такими какие мы есть.
+        Еще круто то, что нас в общем 18 человек и из них 12 девушек и 6 парней, что довольно необычно для сферы IT.<br>
+        Мы решили создать сайт, который даст возможность узнать более подробнее про каждого из нас, ведь это круто, когда находишь что-то общее с одногруппниками.
+        <br><br>
+    </p>
+
+    <p>Welcome to the MT-2101 website! <br>
+        No one will argue with the fact that the atmosphere of MT-2101 is filled with warmth and comfort. <br>
+        We met recently, but this did not prevent us from building loyal and good relations with each other)) <br>
+        We know how to support each other and accept each other as we are. And also each member of the group <br>
+        is responsive and ready to help others. It's also cool that we have a total of 18 people and 12 girls and<br>
+        six guys, which is kind of unusual for the IT University groups.<br>
+        We decided to create a website that would give us a chance to learn more about each of us, because it’s cool to have something to do with your groupmates.</p>
+</div>
+
+<div class="container mt-5">
+    <form method="post" onsubmit="sendEmail(); reset(); return false;">
+        <h4>Leave your feedback :)</h4>
+            {% csrf_token %}
+            {{ form }}
+        <button type="submit" class="btn btn-primary">Send</button>
+        <span>{{ error }}</span>
+    </form>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+    function sendEmail(){
+        Email.send({
+            Host : "smtp.gmail.com",
+            Username : "mtlead2101@gmail.com",
+            Password : "mediatech2101",
+            To : 'assteroid22@gmail.com',
+            From : document.getElementById("name").value,
+            Subject : "new Form",
+            Body : document.getElementById("name").value
+                + "<br> email: " + document.getElementById("email").value
+                + "<br> message: " + document.getElementById("message").value
+        }).then(
+            message => alert ("Your Message Sent")
+        );
+    }
+</script>
+<div class="text_content">
+    <p class="display-6 mt-5"> Web-cite creators : </p>
+    <div class="location">  <img src="../../../static/images/jafar.jpg" class="author_photo">
+        <p> Jafar Zhaxybayev <br>
+            telegram :<a href="https://t.me/jafar_zhax">@jafar.zhax</a>
+        </p>
+    </div>
+
+    <br>
+    <div class="location">  <img src="../../../static/images/askhat.jpg" class="author_photo">
+        <p> Askhat Dzhakupov <br>
+            telegram :<a href="https://t.me/FelixDzerzhinsky">@FelixDzerzhinsky</a>
+        </p>
+    </div>
+    <br>
+    <div class="location">  <img src="../../../static/images/sandu.jpg" class="author_photo">
+        <p> Sandugash Yessen <br>
+            telegram : <a href="https://t.me/sandu_yess">@sandu_yess</a><br>
+        </p>
+    </div>
+</div>
+{% endblock %}

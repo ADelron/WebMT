@@ -1,0 +1,375 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+p {
+    font-family: "Candara Light";
+    font-size: x-large;
+}
+h1 {
+    font-family: "Candara Light";
+    color: darkblue;
+}
+h2 {
+    font-family: "Candara";
+    color: #000042;
+}
+body {
+    background-color: rgba(0,17,104,0.1);
+}
+.header {
+    background-color: white;
+    margin-bottom: 40px;
+    box-shadow: 0 3px 10px rgba(0,0,32,0.2);
+}
+.header a {
+    color: #000032;
+    text-decoration: none;
+}
+.footer {
+    background-color: white;
+    display: flex;
+    height: 15%;
+    color: #000032;
+    font-family: "Century Gothic";
+    font-size: 10px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-top: 40px;
+    box-shadow: 0 3px 10px rgba(0,0,32,0.2);
+}
+.back_button {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+/*MAIN PAGE*/
+@media (min-width: 300px) {
+    .container1 {
+        background-color: white;
+        margin-top: 40px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+        flex-wrap: wrap;
+        box-shadow: 0 0 10px rgba(0,0,32,0.2);
+        padding: 50px 0;
+    }
+    .text_content {
+        margin-left: 5%;
+    }
+    .student-card {
+        width: 300px;
+        height: 424px;
+        margin: 10px;
+        padding: 0;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        box-shadow: 2px 2px 7px rgba(0,0,0,0.2);
+    }
+
+    .student-card:hover {
+        opacity: 70%;
+        width: 305px;
+        cursor: pointer;
+    }
+    .wid {
+        justify-content: center;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    .wid div {
+        max-width: 300px;
+        min-width: 300px;
+        box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+    }
+    .wid div:hover {
+        opacity: 90%;
+    }
+    .a-text {
+        color: #000032;
+        text-decoration: none;
+        font-family: "Candara Light";
+    }
+
+    .container1 .student-card .photo img {
+        height: 400px;
+        overflow: hidden;
+    }
+    .profile-photo {
+        height: 300px;
+        width: 300px;
+        object-fit: cover;
+        border-radius: 50%;
+        box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+        margin: 50px;
+    }
+    .description {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .quote{
+        font-style: italic;
+        text-align: center;
+        padding: 20px;
+    }
+    .description1 {
+        padding-top: 40px;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    /*GALLERY GRID*/
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: repeat(15, 5vw);
+        grid-gap: 15px;
+    }
+    .gallery_img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .gallery_item-1 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 7;
+    }
+    .gallery_item-2 {
+        grid-column-start: 3;
+        grid-column-end: 6;
+        grid-row-start: 1;
+        grid-row-end: 5;
+    }
+    .gallery_item-3 {
+        grid-column-start: 6;
+        grid-column-end: 8;
+        grid-row-start: 1;
+        grid-row-end: 6;
+    }
+    .gallery_item-4 {
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: 5;
+        grid-row-end: 9;
+    }
+    .gallery_item-5 {
+        grid-column-start: 6;
+        grid-column-end: 8;
+        grid-row-start: 6;
+        grid-row-end: 9;
+    }
+    .gallery_item-6 {
+        grid-column-start: 5;
+        grid-column-end: 6;
+        grid-row-start: 5;
+        grid-row-end: 8;
+    }
+    .gallery_item-7 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 7;
+        grid-row-end: 9;
+    }
+    .gallery_item-8 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 9;
+        grid-row-end: 11;
+    }
+    .gallery_item-17 {
+        grid-column-start: 5;
+        grid-column-end: 6;
+        grid-row-start: 8;
+        grid-row-end: 10;
+    }
+    .gallery_item-10 {
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 9;
+        grid-row-end: 12;
+    }
+    .gallery_item-11 {
+        grid-column-start: 4;
+        grid-column-end: 5;
+        grid-row-start: 9;
+        grid-row-end: 11;
+    }
+    .gallery_item-12 {
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 12;
+        grid-row-end: 15;
+    }
+    .gallery_item-16 {
+        grid-column-start: 4;
+        grid-column-end: 5;
+        grid-row-start: 11;
+        grid-row-end: 15;
+    }
+    .gallery_item-9 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 11;
+        grid-row-end: 15;
+    }
+    .gallery_item-15 {
+        grid-column-start: 6;
+        grid-column-end: 8;
+        grid-row-start: 9;
+        grid-row-end: 12;
+    }
+    .gallery_item-13 {
+        grid-column-start: 5;
+        grid-column-end: 7;
+        grid-row-start: 12;
+        grid-row-end: 15;
+    }
+    .gallery_item-14 {
+        grid-column-start: 5;
+        grid-column-end: 6;
+        grid-row-start: 10;
+        grid-row-end: 12;
+    }
+    .gallery_item-18 {
+        grid-column-start: 7;
+        grid-column-end: 8;
+        grid-row-start: 12;
+        grid-row-end: 15;
+    }
+    #gallery_content {
+        margin: 0 5% 0;
+        padding: 0;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .author_photo {
+        height: 105px;
+        width: 105px;
+        margin-right: 1%;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+    .location{
+        display:flex;
+        background-color: white;
+        flex-direction: row;
+        margin-left: 1%;
+        margin-right: 5%;
+        box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+        border-radius: 10px 10px 10px 10px;
+    }
+    .container mt-5{
+        width: 50%;
+        height: 10vh;
+        margin-left: auto;
+        background: darkblue;
+        display: flex;
+        justify-content: center;
+    }
+    form{
+        background: whitesmoke;
+        display: flex;
+        flex-direction: column;
+        padding: 4vw 4vw;
+        width: 70%;
+        max-width: 900px;
+        border-radius: 10px;
+    }
+    form h4{
+        font-family: "Candara";
+        color: #000042;
+        font-weight: 800;
+        margin-bottom:20px;
+    }
+    form input, form textarea{
+        border: 0;
+        margin: 10px 0;
+        padding: 20px;
+        outline: none;
+        background: white;
+        font-size: 16px;
+    }
+    form button{
+        padding: 15px;
+        background: darkblue;
+        color: white;
+        font-size: 18px;
+        border: 0;
+        outline: none;
+        cursor: pointer;
+        width: 150px;
+        margin: 20px auto 0;
+        border-radius: 10%;
+    }
+
+
+
+    .logo {
+        width: 8vw;
+        border-radius: 50%;
+        margin-left: 20px;
+    }
+    .navbar-light .navbar-nav .nav-link {
+        color: #000032;
+        font-family: "Century Gothic";
+        font-size: 5vw;
+        margin-left: 20px;
+    }
+    .info h1 {
+        font-size: 40px;
+    }
+    @media (min-width: 990px){
+        .info h1 {
+            font-size: 3vw;
+        }
+    }
+    @media (min-width: 600px){
+        .navbar-light .navbar-nav .nav-link {
+            font-size: 30px;
+        }
+        .logo {
+            width: 50px;
+        }
+    }
+    .navbar-light .navbar-toggler {
+        color: #000032;
+        border-color: rgba(0,0,0,.1);
+        margin-right: 10px;
+    }
+    .btn {
+        color: #fff;
+        background-color: #000032;
+    }
+    .info {
+        background-color: white;
+        margin-right: 10%;
+        margin-left: 10%;
+        box-shadow: 0 0 10px rgba(0,0,32,0.2);
+    }
+    .reglog{
+        margin-left: 23%;
+        margin-bottom: 13%;
+    }
+    .button {
+        margin-left: 3%;
+    }
+    .add {
+        margin-left: 35%;
+        margin-bottom: 10%;
+    }
+}
